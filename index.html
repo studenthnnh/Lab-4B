@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details in Console</title>
+    <script>
+        // Simulating the books.json content
+        const books = [
+            {
+                "title": "The Great Gatsby",
+                "author": "F. Scott Fitzgerald",
+                "publicationYear": 1925,
+                "genres": ["Fiction", "Classics"]
+            },
+            {
+                "title": "To Kill a Mockingbird",
+                "author": "Harper Lee",
+                "publicationYear": 1960,
+                "genres": ["Fiction", "Coming-of-Age"]
+            }
+        ];
+
+        // Display details in the console
+        function displayDetails() {
+            // a) Title of the first book
+            console.log("Title of the first book:", books[0].title);
+
+            // b) Author of the second book
+            console.log("Author of the second book:", books[1].author);
+
+            // c) Genres of all books
+            const allGenres = books.flatMap(book => book.genres).join(", ");
+            console.log("Genres of all books:", allGenres);
+        }
+
+        // Run the function when the page loads
+        window.onload = displayDetails;
+    </script>
+</head>
+<body>
+    <h1>Book Collection</h1>
+    <p>Open the browser's Developer Tools (Inspect > Console) to view the details.</p>
+</body>
+</html>
